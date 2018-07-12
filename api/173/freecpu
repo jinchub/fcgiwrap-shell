@@ -1,0 +1,34 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=UTF-8"
+echo "" 
+echo "<html>"
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+echo "<body>"
+echo "<meta http-equiv="refresh" content="10">"
+echo '<div style="padding-left:10px;">'
+ip="192.168.x.x"
+echo '<h5 style="color:#848484;">'
+dd=`date`
+echo "统计时间: $dd [10秒刷新1次] 【当前机器ip: $ip】"
+echo '</h5>'
+echo '<br>'
+echo '<h2 style="color:red;margin:-10px 0px;border-left:4px solid;padding:4px;">Cpu 使用</h2>'
+echo '<pre style="text-shadow: 0 1px rgba(0, 0, 0, 0.3);border-left: 4px solid rgb(12, 40, 245);padding:5px;color:#fff;">'
+mpstat -P ALL
+echo "</pre>"
+echo '<br>'
+echo '<br>'
+echo '<h2 style="color:red;border-left:4px solid;margin: -10px 0px;padding:4px;">内存使用</h2>'
+echo '<pre style="border-left: 4px solid rgb(12, 40, 245);padding:5px;color:#fff;">'
+free -m
+echo "</pre>"
+echo '<br>'
+echo '<br>'
+echo '<h2 style="color:red;border-left:4px solid;margin: -10px 0px;padding:4px;">端口使用</h2>'
+echo '<pre style="border-left: 4px solid rgb(12, 40, 245);padding:5px;color:#fff;">'
+netstat -apntud
+echo "</pre>"
+echo '</div>'
+

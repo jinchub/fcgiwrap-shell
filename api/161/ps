@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=utf-8"
+echo ""
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+echo "<meta http-equiv="refresh" content="5">"
+echo '<div style="padding-left:10px;">' 
+echo '<h2 style="color:red;border-left:4px solid;padding:4px;">系统运行的进程</h2>'
+ip="192.168.x.x"
+echo '<h5 style="color:#848484;">'
+dd=`date`
+echo "统计时间: $dd [每5秒刷新1次]  【当前机器ip: $ip】"
+echo '</h5>'
+echo '<pre style="border-left: 4px solid rgb(12, 40, 245);padding:5px;color:#fff;">'
+sshpass -p 'passwd' ssh root@$ip -o StrictHostKeyChecking=no 'ps -aef'
+echo "</pre>
+echo '</div>'
