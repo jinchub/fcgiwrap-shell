@@ -2,16 +2,7 @@
 # 网页执行shell等脚本
 
 
-![](https://img.jinchuang.org/github/fcgiwrap-shelllog1.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllog2.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shellhome.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllist1.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllist-disk.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllist-ps.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllist-server.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllist-ssh.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllist-uptime.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shellmenu.png)
+
 
 ## 说明
 
