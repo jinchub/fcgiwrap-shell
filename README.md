@@ -11,6 +11,7 @@
 ![](https://img.jinchuang.org/github/fcgiwrap-server.png)
 ![](https://img.jinchuang.org/github/fcgiwrapssh.png)
 ![](https://img.jinchuang.org/github/fcgiwrapuptime.png)
+![](https://img.jinchuang.org/github/fcgiwrap-alldisk.png)
 ![](https://img.jinchuang.org/github/fcgiwrap-shellmenu.png)
 
 
