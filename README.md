@@ -1,5 +1,5 @@
 
-# 网页执行shell脚本，python其他脚本也是可以的只用替换相关命令即可
+# 网页执行shell脚本;python等脚本只需要替换相关命令
 
 ## 图例
 ![](https://img.jinchuang.org/github/fcgiwrap-shelllog1.png)
@@ -24,11 +24,12 @@
 - :1234: 数据显示样式可以自定义修改
 
 ## 安装使用
-安装文档: [Nginx支持web界面执行bash.python等脚本](https://me.jinchuang.org/archives/114.html)
+安装文档: [Nginx支持web界面执行bash.python等脚本](https://me.jinchuang.org/archives/114.html)  
 如果要在远程机器上执行命令，需要安装sshpass 命令，或者使用export 或者使用秘钥认证都行
 
-NGINX 配置：
+NGINX 转发配置：
 ```bash
+#目录自定义
 location ~ ^/jcmon/api/ {  #这里的后缀匹配根据需要修改
 	gzip off;
 	fastcgi_pass  unix:/tmp/fcgiwrap.socket;
