@@ -2,17 +2,6 @@
 # 网页执行shell脚本;python等脚本只需要替换相关命令
 
 ## 图例
-![](https://img.jinchuang.org/github/fcgiwrap-shelllog1.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shelllog2.png)
-![](https://img.jinchuang.org/github/fcgiwraphome.png)
-![](https://img.jinchuang.org/github/fcgiwrapllist1.png)
-![](https://img.jinchuang.org/github/fcgiwrapdisk.png)
-![](https://img.jinchuang.org/github/fcgiwrapps.png)
-![](https://img.jinchuang.org/github/fcgiwrap-server.png)
-![](https://img.jinchuang.org/github/fcgiwrapssh.png)
-![](https://img.jinchuang.org/github/fcgiwrapuptime.png)
-![](https://img.jinchuang.org/github/fcgiwrap-alldisk.png)
-![](https://img.jinchuang.org/github/fcgiwrap-shellmenu.png)
 
 
 ## 说明
