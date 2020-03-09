@@ -1,8 +1,5 @@
 
-# 网页执行shell脚本;python等脚本只需要替换相关命令
-
-## 图例
-
+# 网页执行shell脚本python等脚本
 
 ## 说明
 :triangular_ruler:
@@ -15,12 +12,12 @@
 
 ## 安装使用
 安装文档: [Nginx支持web界面执行bash.python等脚本](https://me.jinchuang.org/archives/114.html)  
-如果要在远程机器上执行命令，需要安装sshpass 命令，或者使用export 或者使用秘钥认证都行
+远程机器执行命令，主机可以通过sshpass/export/免密登录/ansible等功能实现
 
 NGINX 转发配置：
 ```bash
-#目录自定义
-location ~ ^/jcmon/api/ {  #这里的后缀匹配根据需要修改
+#脚本存放目录自定义 例如放在/jcmon/api/目录
+location ~ ^/jcmon/api/ {
 	gzip off;
 	fastcgi_pass  unix:/tmp/fcgiwrap.socket;
 	#fastcgi_index index.cgi;
@@ -29,15 +26,17 @@ location ~ ^/jcmon/api/ {  #这里的后缀匹配根据需要修改
 }
 
 ```
-具体执行的脚本例子【基本就是html+shell的结合，html代码需要用echo " "方式】：
+
+执行的脚本例子【就是html+脚本的结合，html代码需要用echo " "方式】
 ```bash
 #!/bin/bash
 echo "Content-Type:text/html;charset=utf-8"
-echo "" 
-#echo "<script>window.setInterval(function(){
-#	window.location.reload();
-#},1000);</script>"
+echo ""
+
+#自动刷新网页,定时去执行查看磁盘使用功能情况
 echo "<meta http-equiv="refresh" content="60">"
+
+#html+css样式+命令
 echo '<div style="padding-left:10px;">'
 ip="这里改为你的机器ip即可"
 echo '<h1 style="color:red;border-left:4px solid;padding:4px;">硬盘使用情况</h1>'
@@ -53,4 +52,5 @@ df -hT
 #sshpass -p 'passwd' ssh root@$ip -o StrictHostKeyChecking=no 'df -hT'
 echo '</pre>'
 ```
-
+## 效果
+![disk](https://img.jinchuang.org/4231156802.png)
