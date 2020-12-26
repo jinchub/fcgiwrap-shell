@@ -19,14 +19,14 @@ echo '</h5>'
 echo "<br>"
 echo '<h2 class="title">用户连接情况</h2>'
 echo '<pre>'
-sshpass -p "emucoo@2018" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'who'
+sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'who'
 echo "</pre>"
 echo "<br>"
 echo "<br>"
 echo "<br>"
 echo '<h2 class="title">用户登录失败记录<font style="font-size:12px;">  [ 空记录表示没有用户登录失败记录]</font></h2>'
 echo '<pre >'
-sshpass -p "emucoo@2018" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'lastb'
+sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'lastb'
 echo "</pre>"
 echo "</div>"
 

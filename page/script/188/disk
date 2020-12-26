@@ -18,6 +18,6 @@ dd=`date`
 echo "统计时间: $dd 【当前机器ip: $ip】"
 echo '</h5>'
 echo '<pre>'
-sshpass -p "emucoo@2018" ssh root@$ip -o StrictHostKeyChecking=no  'df -hT'
+sshpass -p "password" ssh root@$ip -o StrictHostKeyChecking=no  'df -hT'
 #ansible saas3[0] -m shell -a 'df -hT'
 echo '</pre>'

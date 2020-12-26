@@ -18,5 +18,5 @@ dd=`date`
 echo "统计时间: $dd 【当前机器ip: $ip】"
 echo '</h5>'
 echo '<pre>'
-sshpass -p "emucoo@2018" ssh -p2217 root@$ip -o StrictHostKeyChecking=no 'free -h'
+sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no 'free -h'
 echo '</pre>'

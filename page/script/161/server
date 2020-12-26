@@ -22,12 +22,12 @@ echo '</h5>'
 echo '<br>'
 echo '<h2 class="title">vsftpd进程查看</h2>'
 echo '<pre>'
-sshpass -p "emucoo@2018" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep vsftpd'
+sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep vsftpd'
 echo "</pre>"
 echo '<br>'
 echo '<h2 class="title">mysql 进程查看</h2>'
 echo '<pre>'
-sshpass -p "emucoo@2018" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep mysql'
+sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep mysql'
 echo "</pre>"
 echo '</div>'
 
