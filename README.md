@@ -34,14 +34,14 @@ location ~ ^/linux-command/page/script/ {
 执行脚本命令文本示例：(就是html+linux脚本的结合，html代码需要用echo ''方式)
 ```bash
 #!/bin/bash
-echo "Content-Type:text/html;charset=utf-8"
-echo "" 
+echo 'Content-Type:text/html;charset=utf-8'
+echo ''
 
 # 自动刷新当前页面
-#echo "<script>window.setInterval(function(){
+#echo '<script>window.setInterval(function(){
 #	window.location.reload();
-#},1000);</script>"
-#echo "<meta http-equiv="refresh" content="60">"
+#},1000);</script>'
+#echo '<meta http-equiv="refresh" content="60">'
 
 # css样式
 echo '<style>
