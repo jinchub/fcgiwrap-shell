@@ -33,29 +33,46 @@ location ~ ^/linux-command/page/script/ {
 ```
 
 执行的脚本例子【就是html+linux脚本的结合，html代码需要用echo ''方式】
-```bash
 #!/bin/bash
-echo 'Content-Type:text/html;charset=utf-8'
-echo ''
+echo "Content-Type:text/html;charset=utf-8"
+echo "" 
 
-#自动刷新网页,定时去执行查看磁盘使用功能情况
-echo '<meta http-equiv="refresh" content="60">'
+# 自动刷新当前页面
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+#echo "<meta http-equiv="refresh" content="60">"
 
-#html+css样式+命令
-echo '<div style="padding-left:10px;">'
-ip="这里改为你的机器ip即可"
-echo '<h1 style="color:red;border-left:4px solid;padding:4px;">硬盘使用情况</h1>'
-echo '<h5 style="color:#848484;">'
+# css样式
+echo '<style>
+body{color:#cecece;}
+.title{color: #FF9800;border-left: 4px solid;padding: 4px;}
+pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
+</style>'
+
+# 定义变量
+ip="192.168.16.188"
 dd=`date`
-echo "统计时间: $dd [60s刷新一次] 【当前机器ip: $ip】"
-echo '</h5>'
-echo '<pre style="border-left: 4px solid rgb(12, 40, 245);padding:5px;color:#fff;">'
-#本地服务器
-df -hT
 
-#远程服务器
-#sshpass -p 'passwd' ssh root@$ip -o StrictHostKeyChecking=no 'df -hT'
+echo '<div style="padding-left:10px;">'
+
+# 标题
+echo '<h1 class="title">硬盘使用情况</h1>'
+
+# 内容
+echo '<h5 style="color:#848484;">'
+echo "统计时间: $dd 【当前机器ip: $ip】"
+echo '</h5>'
+
+# 命令返回结果
+echo '<pre>'
+# 本机获取磁盘使用
+df -hT
+# 远程机器获取磁盘使用(使用sshpass)
+sshpass -p "password" ssh root@$ip -o StrictHostKeyChecking=no  'df -hT'
 echo '</pre>'
+
+echo '</div>'
 ```
 ## 效果
 ![disk](https://me.jinchuang.org/usr/uploads/2020/12/59793653.png)
