@@ -15,8 +15,9 @@
 
 
 启动 fcgiwrap服务：
+```bash
 /etc/init.d/fcgiwrap start
-
+```
 
 NGINX 转发配置：
 ```bash
@@ -38,7 +39,7 @@ echo 'Content-Type:text/html;charset=utf-8'
 echo ''
 
 #自动刷新网页,定时去执行查看磁盘使用功能情况
-echo "<meta http-equiv="refresh" content="60">"
+echo '<meta http-equiv="refresh" content="60">'
 
 #html+css样式+命令
 echo '<div style="padding-left:10px;">'
