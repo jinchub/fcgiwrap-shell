@@ -10,7 +10,7 @@ body{color:#cecece;}
 .title{color: #FF9800;border-left: 4px solid;padding: 4px;}
 pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
 </style>'
-ip="192.168.16.161"
+ip="192.168.x.x"
 echo '<div style="padding-left:10px;">'
 echo '<h1 class="title">系统负载情况</h1>'
 echo '<h5 style="color:#848484;">'
