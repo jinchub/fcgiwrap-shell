@@ -14,7 +14,7 @@ pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
 </style>'
 
 echo '<div style="padding-left:10px;">'
-ip="192.168.16.173"
+ip="192.168.x.x"
 echo '<h5 style="color:#848484;">'
 dd=`date`
 echo "统计时间: $dd 【当前机器ip: $ip】"
