@@ -31,8 +31,8 @@ location ~ ^/linux-command/page/script/ {
 }
 
 ```
-
-执行的脚本例子【就是html+linux脚本的结合，html代码需要用echo ''方式】
+执行脚本命令文本示例：(就是html+linux脚本的结合，html代码需要用echo ''方式)
+```bash
 #!/bin/bash
 echo "Content-Type:text/html;charset=utf-8"
 echo "" 
