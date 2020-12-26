@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+    <title>shell执行控制台</title>
+	<link href="favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="./js/nav.js"></script>
+	<script>
+        $(function() {
+            $("ul li ul li a,ul li a").click(function() {
+                var that = $(this);
+                var href = that.attr("href");
+                $("#iframe").attr("src",href);
+                return false;
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+        //加载事件
+            var collection = $(".flag");
+            $.each(collection, function () {
+                $(this).addClass("start");
+            });
+        });
+        //单击事件
+        function dj(dom) {
+            var collection = $(".flag");
+            $.each(collection, function () {
+                $(this).removeClass("end gradually");
+                $(this).addClass("start");
+            });
+            $(dom).removeClass("start");
+            $(dom).addClass("end gradually");
+        }
+		
+    </script>
+    <script>
+        function home(){
+            window.open("https://me.jinchuang.org");
+        }
+    </script>
+    <script>
+        function about(){
+            window.open("https://me.jinchuang.org/about.html");
+        }
+    </script>
+    <script>
+        function archives(){
+            window.open("https://me.jinchuang.org/archives.html");
+        }
+    </script>
+    <script>
+        function tags(){
+            window.open("https://me.jinchuang.org/tags.html");
+        }
+    </script>
+
+    <script>
+        function yule(){
+            window.open("https://me.jinchuang.org/yule.html");
+        }
+    </script>
+    <script>
+        function link(){
+            window.open("https://me.jinchuang.org/links.html");
+        }
+    </script>
+</head>
+<body ondragstart="return false;">
+    <div class="wapper">
+		<div class="nav">
+			<div class="nav-top">
+				<div id="mini"><img style="width:45px;margin-top: 15px;margin-bottom:10px;" src="images/logo.png" ></div>
+			</div>
+			<ul>
+				<li class="nav-item">
+					<a href="javascript:;"><i class="my-icon nav-icon icon_1"></i><span>VM 虚拟机</span><i class="my-icon nav-more"></i></a>
+					<ul>
+						<li class="nav-item-e"><a class="no flag hq_hy" onclick="dj(this);" href="./page/h5/local/local.html"><i class="my-icon nav-1"></i><span>本机(173)</span></a></li>
+						<li class="nav-item-e"><a class="no flag hq_hy" onclick="dj(this);" href="./page/h5/188/188.html"><i class="my-icon nav-1"></i><span>188</span></a></li>
+
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:;"><i class="my-icon nav-icon icon_2"></i><span>实体物理机</span><i class="my-icon nav-more"></i></a>
+					<ul>
+						<li class="nav-item-e"><a class="no flag hq_hy" onclick="dj(this);" href="./page/h5/161/161.html"><i class="my-icon nav-1"></i><span>161</span></a></li>
+
+					</ul>
+				</li>
+				<!--<li class="nav-item">
+					<a href="javascript:;"><i class="my-icon nav-icon icon_3"></i><span>菜单导航</span><i class="my-icon nav-more"></i></a>
+					<ul>
+						<li class="nav-item-e"><i style="padding-left: 52px;"class="my-icon nav-3-1"></i><input type="button" onclick=javascrtpt:home()  value="首页" class="menu"></input></li>
+						<li class="nav-item-e"><i style="padding-left: 52px;"class="my-icon nav-3-2"></i><input type="button" onclick=javascrtpt:about()  value="关于" class="menu" style="margin-left: -5px;"></input></li>
+						<li class="nav-item-e"><i style="padding-left: 49px;"class="my-icon nav-3-3"></i><input type="button" onclick=javascrtpt:archives()  value="归档" class="menu" style="margin-left: -9px;"></input></li>
+						<li class="nav-item-e"><i style="padding-left: 52px;"class="my-icon nav-3-6"></i><input type="button" onclick=javascrtpt:tags()  value="标签" class="menu" style="margin-left: -6px;"></input></li>
+						<li class="nav-item-e"><i style="padding-left: 52px;"class="my-icon nav-3-4"></i><input type="button" onclick=javascrtpt:yule()  value="娱乐" class="menu" style="margin-left: -5px;"></input></li>
+						<li class="nav-item-e"><i style="padding-left: 52px;"class="my-icon nav-3-5"></i><input type="button" onclick=javascrtpt:link()  value="友链" class="menu"></input></li>
+						
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="javascript:;"><i style="color:#f017ff" class="my-icon nav-icon icon_4"></i><span>听听音乐</span><i class="my-icon nav-more"></i></a>
+					<ul>
+						<li class="nav-item-e"><a class="no flag hq_hy" onclick="dj(this);" href="./music/"><i style="margin-right: -5px;" class="my-icon nav-4-1"></i><span style="position:absolute;color:#ff0000;font-weight:bold;">网易云音乐</span></a></li>
+					</ul>
+				</li>-->
+				<li class="nav-item">
+					<a onclick="javascript:location.reload();"><i style="color:#ff9c00" class="my-icon nav-icon icon_5"></i><span>刷新页面</span><i style="color: transparent;" class="my-icon nav-more"></i></a>
+				</li>
+			</ul>
+			<div class="nav-bottom">
+				
+				<div class="footer">
+					Linux<br>Command<br><br><fon class="my-icon nav-buttom"> </font>
+				</div>
+			</div>
+		</div>
+    <div id="content">
+        <iframe id="iframe" src="./page/content/index.html"></iframe>
+    </div>
+    </div>
+</body>
+</html>
+
+

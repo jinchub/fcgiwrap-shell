@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>188</title>
+	<script src="../../../js/jquery-2.1.1.min.js"></script>
+	<link href="../../../images/logo.png" rel="shortcut icon">
+	<link href="../../../css/page.css" rel="stylesheet" type="text/css"/>
+	<script>
+		$(function() {
+			$("#headerBox a,#navBox a").click(function() {
+				var that = $(this);
+				var href = that.attr("href");
+				$("#iframe").attr("src",href);
+				return false;
+			});
+		});
+	</script>
+    <script type="text/javascript">
+        $(function () {
+        //加载事件
+            var collection = $(".flag");
+            $.each(collection, function () {
+                $(this).addClass("start");
+            });
+        });
+        //单击事件
+        function dj(dom) {
+            var collection = $(".flag");
+            $.each(collection, function () {
+                $(this).removeClass("end gradually");
+                $(this).addClass("start");
+            });
+            $(dom).removeClass("start");
+            $(dom).addClass("end gradually");
+        }
+		
+    </script>
+</head>
+<body>
+	<nav id="navBox">
+		<ul>
+			<li><a class="no flag hq_hy" onclick="dj(this);" href="../../script/188/disk">硬盘使用</a></li>
+			<li><a class="no flag hq_hy" onclick="dj(this);" href="../../script/188/mem">内存使用</a></li>
+			<li><a class="no flag hq_hy" onclick="dj(this);" href="../../script/188/ps">系统进程</a></li>
+			<li><a class="no flag hq_hy" onclick="dj(this);" href="../../script/188/server">服务详情</a></li>
+			<li><a class="no flag hq_hy" onclick="dj(this);" href="../../script/188/ssh">SSH用户</a></li>
+			<li><a class="no flag hq_hy" onclick="dj(this);" href="../../script/188/uptime">系统负载</a></li>
+		</ul>
+	</nav>
+	<div id="contentBox">
+		<iframe id="iframe" src="../../script/188/info"></iframe>
+	</div>
+</body>
+</html>

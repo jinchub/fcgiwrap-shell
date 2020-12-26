@@ -1,0 +1,22 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=utf-8"
+echo "" 
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+#echo "<meta http-equiv="refresh" content="60">"
+echo '<style>
+body{color:#cecece;}
+.title{color: #FF9800;border-left: 4px solid;padding: 4px;}
+pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
+</style>'
+ip="192.168.16.161"
+echo '<div style="padding-left:10px;">'
+echo '<h1 class="title">系统负载情况</h1>'
+echo '<h5 style="color:#848484;">'
+dd=`date`
+echo "统计时间: $dd 【当前机器ip: $ip】"
+echo '</h5>'
+echo '<pre>'
+sshpass -p "emucoo@2018" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'top -b -n 1 |head -n 5'
+echo '</pre>'

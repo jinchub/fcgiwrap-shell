@@ -1,0 +1,32 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=utf-8"
+echo "" 
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+#echo "<meta http-equiv="refresh" content="5">"
+echo '<div style="padding-left:10px;">'
+echo '<style>
+body{color:#cecece;}
+.title{color: #FF9800;border-left: 4px solid;padding: 4px;}
+pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
+</style>'
+echo '<h5 style="color:#848484;">'
+ip="192.168.16.188"
+dd=`date`
+echo "统计时间: $dd 【当前机器ip: $ip】"
+echo '</h5>'
+echo "<br>"
+echo '<h2 class="title">用户连接情况</h2>'
+echo '<pre>'
+sshpass -p "emucoo@2018" ssh root@$ip -o StrictHostKeyChecking=no  'who'
+echo "</pre>"
+echo "<br>"
+echo "<br>"
+echo "<br>"
+echo '<h2 class="title">用户登录失败记录<font style="font-size:12px;">  [ 空记录表示没有用户登录失败记录]</font></h2>'
+echo '<pre >'
+sshpass -p "emucoo@2018" ssh root@$ip -o StrictHostKeyChecking=no  'lastb'
+echo "</pre>"
+echo "</div>"
+

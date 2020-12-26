@@ -1,0 +1,35 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=utf-8"
+echo ""
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+#echo "<meta http-equiv="refresh" content="5">"
+echo '<style>
+.title{
+	position: fixed;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+}
+</style>'
+echo '<div class="title">' 
+
+echo '<h2 style="color:#ff9800;">本机ip：192.168.16.173</h2>'
+echo '<div style="color:ff9800">'
+echo "运行中服务："
+echo '<br>'
+echo '<br>'
+echo "1、jenkins"
+echo '<br>'
+echo "2、nginx"
+echo '<br>'
+echo "3、mysql"
+echo '<br>'
+echo "4、php"
+echo '<br>'
+echo "5、fcgiwrap"
+echo '<br>'
+echo "6、nexus"
+echo '</div>'
+echo '</div>'

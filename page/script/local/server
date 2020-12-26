@@ -1,0 +1,53 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=UTF-8"
+echo "" 
+echo "<html>"
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+#echo "<body>"
+#echo "<meta http-equiv="refresh" content="10">"
+echo '<style>
+body{color:#cecece;}
+.title{color: #FF9800;border-left: 4px solid;padding: 4px;}
+pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
+</style>'
+
+echo '<div style="padding-left:10px;">'
+ip="192.168.16.173"
+echo '<h5 style="color:#848484;">'
+dd=`date`
+echo "统计时间: $dd 【当前机器ip: $ip】"
+echo '</h5>'
+echo '<br>'
+echo '<h2 class="title"">nginx 进程查看</h2>'
+echo '<pre>'
+ps -ef|grep nginx
+echo "</pre>"
+echo '<br>'
+echo '<h2 class="title">mysql 进程查看</h2>'
+echo '<pre>'
+ps -ef|grep mysql
+echo "</pre>"
+echo '<br>'
+echo '<h2 class="title">jenkins 进程查看</h2>'
+echo '<pre>'
+ps -ef|grep jenkins
+echo "</pre>"
+echo '<br>'
+echo '<h2 class="title">fcgiwrap 进程查看</h2>'
+echo '<pre>'
+ps -ef|grep fcgiwrap
+echo "</pre>"
+echo '<br>'
+echo '<h2 class="title">nexus 进程查看</h2>'
+echo '<pre>'
+ps -ef|grep nexus
+echo "</pre>"
+echo '<br>'
+echo '<h2 class="title">php 进程查看</h2>'
+echo '<pre>'
+ps -ef|grep php
+echo "</pre>"
+echo '</div>'
+

@@ -1,0 +1,39 @@
+#!/bin/bash
+echo "Content-Type:text/html;charset=UTF-8"
+echo "" 
+echo "<html>"
+#echo "<script>window.setInterval(function(){
+#	window.location.reload();
+#},1000);</script>"
+#echo "<body>"
+#echo "<meta http-equiv="refresh" content="10">"
+echo '<style>
+body{color:#cecece;}
+.title{color: #FF9800;border-left: 4px solid;padding: 4px;}
+pre{font-size:14px;border-left: 4px solid #4CAF50;padding: 5px;}
+</style>'
+
+echo '<div style="padding-left:10px;">'
+ip="192.168.16.188"
+echo '<h5 style="color:#848484;">'
+dd=`date`
+echo "统计时间: $dd 【当前机器ip: $ip】"
+echo '</h5>'
+echo '<br>'
+echo '<h2 class="title"">nginx 进程查看</h2>'
+echo '<pre>'
+sshpass -p "emucoo@2018" ssh root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep nginx'
+echo "</pre>"
+echo '<br>'
+echo '<h2 class="title">java 进程查看</h2>'
+echo '<pre>'
+sshpass -p "emucoo@2018" ssh root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep java'
+echo "</pre>"
+echo '<br>'
+echo '<br>'
+echo '<h2 class="title">redis集群 进程查看</h2>'
+echo '<pre>'
+sshpass -p "emucoo@2018" ssh root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep redis'
+echo "</pre>"
+echo '</div>'
+
