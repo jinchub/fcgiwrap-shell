@@ -21,7 +21,7 @@
 
 NGINX 转发配置：
 ```bash
-#执行的脚本目录自定义，例如放在/linux-command/page/script/目录(linux-command为根目录)
+#执行的脚本目录自定义，例如放在linux-command/page/script/目录(linux-command为网站根目录下程序目录)
 location ~ ^/linux-command/page/script/ {
 	gzip off;
 	fastcgi_pass  unix:/tmp/fcgiwrap.socket;
