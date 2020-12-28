@@ -20,14 +20,9 @@ dd=`date`
 echo "统计时间: $dd 【当前机器ip: $ip】"
 echo '</h5>'
 echo '<br>'
-echo '<h2 class="title">vsftpd进程查看</h2>'
+echo '<h2 class="title">nginx进程查看</h2>'
 echo '<pre>'
-sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep vsftpd'
-echo "</pre>"
-echo '<br>'
-echo '<h2 class="title">mysql 进程查看</h2>'
-echo '<pre>'
-sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep mysql'
+sshpass -p "password" ssh -p2217 root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep nginx'
 echo "</pre>"
 echo '</div>'
 

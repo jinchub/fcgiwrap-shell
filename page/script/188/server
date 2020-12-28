@@ -25,15 +25,5 @@ echo '<pre>'
 sshpass -p "password" ssh root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep nginx'
 echo "</pre>"
 echo '<br>'
-echo '<h2 class="title">java 进程查看</h2>'
-echo '<pre>'
-sshpass -p "password" ssh root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep java'
-echo "</pre>"
-echo '<br>'
-echo '<br>'
-echo '<h2 class="title">redis集群 进程查看</h2>'
-echo '<pre>'
-sshpass -p "password" ssh root@$ip -o StrictHostKeyChecking=no  'ps -ef|grep redis'
-echo "</pre>"
 echo '</div>'
 

@@ -25,24 +25,9 @@ echo '<pre>'
 ps -ef|grep nginx
 echo "</pre>"
 echo '<br>'
-echo '<h2 class="title">mysql 进程查看</h2>'
-echo '<pre>'
-ps -ef|grep mysql
-echo "</pre>"
-echo '<br>'
-echo '<h2 class="title">jenkins 进程查看</h2>'
-echo '<pre>'
-ps -ef|grep jenkins
-echo "</pre>"
-echo '<br>'
 echo '<h2 class="title">fcgiwrap 进程查看</h2>'
 echo '<pre>'
 ps -ef|grep fcgiwrap
-echo "</pre>"
-echo '<br>'
-echo '<h2 class="title">nexus 进程查看</h2>'
-echo '<pre>'
-ps -ef|grep nexus
 echo "</pre>"
 echo '<br>'
 echo '<h2 class="title">php 进程查看</h2>'
