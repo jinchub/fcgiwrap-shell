@@ -15,14 +15,14 @@ echo '<style>
 </style>'
 echo '<div class="title">' 
 
-echo '<h2 style="color:#ff9800;">本机ip：192.168.x.x(ftp/备份机器)</h2>'
+echo '<h2 style="color:#ff9800;">本机ip：192.168.x.x(xxx服务器)</h2>'
 echo '<div style="color:ff9800">'
 echo "运行中服务："
 echo '<br>'
 echo '<br>'
-echo "1、vsftpd"
+echo "1、xxx"
 echo '<br>'
-echo "2、mysql"
+echo "2、xxx"
 echo '<br>'
 echo '</div>'
 echo '</div>'
