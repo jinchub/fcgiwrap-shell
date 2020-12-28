@@ -11,6 +11,7 @@
 
 ## 安装使用
 安装文档: [Nginx支持web界面执行bash.python等脚本](https://me.jinchuang.org/archives/114.html)  
+安装文档（详细）: [Nginx支持web界面执行bash.python等命令和脚本](https://www.cnblogs.com/jinchuang/p/14200587.html)  
 远程机器执行命令，主机可以通过sshpass/export/免密登录/ansible等功能实现
 
 
