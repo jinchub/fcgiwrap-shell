@@ -31,9 +31,6 @@ echo '</h5>'
 
 # 命令返回结果
 echo '<pre>'
-# 本机获取磁盘使用
-df -hT
-# 远程机器获取磁盘使用(使用sshpass)
 sshpass -p "password" ssh root@$ip -o StrictHostKeyChecking=no  'df -hT'
 echo '</pre>'
 
