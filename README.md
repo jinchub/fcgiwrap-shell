@@ -76,4 +76,4 @@ echo '</pre>'
 echo '</div>'
 ```
 ## 效果
-![disk](https://me.jinchuang.org/usr/uploads/2020/12/59793653.png)
+![disk](https://img2020.cnblogs.com/blog/1372003/202012/1372003-20201228173812237-839296495.gif)
