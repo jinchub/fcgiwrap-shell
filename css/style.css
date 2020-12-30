@@ -43,7 +43,7 @@ ul li ul li a span {
     margin: 0 !important;
 }
 ul li ul li a {
-	padding-left: 45px !important;
+	padding-left: 30px !important;
 }
 a {
 	text-decoration: none;
@@ -85,6 +85,10 @@ a {
 }
 .nav-item,.nav-item-e {
 	position: relative;
+}
+.nav-item-e a{
+	line-height: 35px;
+    max-height: 35px;
 }
 .nav-item:hover{
 }
@@ -230,10 +234,13 @@ a {
 	color: #ffffff;
 /*    background: #2169f6;*/
 	background:#003967;
+border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 .nav-item>a:hover {
 	color: #fff !important;
 	background: #2169f6;
+	border-radius: 5px;
 }
 
 .nav-show,.nav-item>a:hover {
@@ -311,6 +318,7 @@ a {
 
 .nav-mini.nav .nav-item:hover {
 	background: #2169f6;
+	border-radius: 5px;
 }
 
 .nav-mini.nav .nav-item:hover .nav-item a {
