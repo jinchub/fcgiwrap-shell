@@ -17,6 +17,7 @@
 ## 传参使用
 参考: [Bash Shell CGI](http://www.yolinux.com/TUTORIALS/BashShellCgi.html)
 
+
 启动 fcgiwrap服务：
 ```bash
 /etc/init.d/fcgiwrap start
